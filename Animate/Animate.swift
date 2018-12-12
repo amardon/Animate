@@ -71,28 +71,11 @@ public extension UIView {
         guard !animations.isEmpty else {
             return
         }
-        /*
-        for animation in animations {
-            <#code#>
-        }
-        /*
-        var animations = animations
-        let animation = animations.removeFirst()
         
-        UIView.animate(withDuration: animation.duration, animations: {
-            animation.closure(self)
-        } , completion: { (_) in
-            self.animateInSequence(animations)
-        })
- */
+        for animation in animations {
+            UIView.animate(withDuration: animation.duration, animations: {
+                animation.closure(self)
+            })
+        }
     }
 }
-
-
-
-
-
-
-
-
-
